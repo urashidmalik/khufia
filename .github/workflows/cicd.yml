@@ -1,4 +1,7 @@
-on: [push, pull_request]
+on: 
+  create:
+    tags:
+      - v*
 
 name: khufia - CI
 jobs:
@@ -17,7 +20,7 @@ jobs:
     - name: Checkout code
       uses: actions/checkout@v2
       with:
-        fetch-depth: '0'
+        fetch-depth: 0
     - name: Test khufia Code
       run: make test
 
