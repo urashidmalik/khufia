@@ -21,6 +21,8 @@ jobs:
     - name: Test khufia Code
       run: make test
 
+    - name: Build 
+      run: make build
     
     - name: Bump version and push tag
       id: newtag
