@@ -3,7 +3,7 @@ on:
     tags:
       - v*
 
-name: khufia - CI
+name: khufia - CI - Release
 jobs:
   
   Release:
