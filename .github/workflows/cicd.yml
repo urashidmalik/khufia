@@ -1,9 +1,7 @@
-on: 
-  push:
-    tags:
-      - "v*.*.*"
+on: [push, pull_request]
+
 name: khufia - CI
-jobs: 
+jobs:
   test:
     # strategy:
     #   matrix:
