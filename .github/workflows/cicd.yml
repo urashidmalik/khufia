@@ -24,13 +24,11 @@ jobs:
     - name: Build 
       run: make build
     
-    - name: Tag
-      uses: K-Phoen/semver-release-action@master
-      with:
-        release_branch: main
-
+    - name: Bump version and push tag
+      uses: anothrNick/github-tag-action@1.36.0
       env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        WITH_V: true
     - name: Release
       uses: softprops/action-gh-release@v1
       with:
