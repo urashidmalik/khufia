@@ -37,8 +37,10 @@ build: clean compile-windows compile-windows compile-windows compile-freebsd com
 	
 build-mac: clean compile-mac-intel compile-mac-apple-silicon
 
-test:
+test-coverprofile:
 	cd src && go test --coverprofile=coverage.out ./...
+
+test: test-coverprofile
 	cd src && go tool cover -func=coverage.out
 
 test-html: test
