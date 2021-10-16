@@ -1,4 +1,4 @@
-#Purpose
+# Purpose
 Utility to quickly encrypt and decrpt files without OpenSSL
 
 ## Usage
