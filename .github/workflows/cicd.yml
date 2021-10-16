@@ -30,7 +30,7 @@ jobs:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WITH_V: true
         DEFAULT_BUMP: patch
-     - uses: ncipollo/release-action@v1
+    - uses: ncipollo/release-action@v1
       with:
         artifacts: "bin/khufia-*"
         token: ${{ secrets.GITHUB_TOKEN }}
