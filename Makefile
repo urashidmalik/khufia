@@ -30,7 +30,7 @@ compile-mac-intel:
 	cd src && GOOS=${DARWIN} GOARCH=${ARCH_AMD64} CGO_ENABLED=1 go build -o ../bin/${BINARY_NAME}-${DARWIN}-${ARCH_AMD64} main.go
 
 compile-mac-apple-silicon:
-	cd src && GOOS=${DARWIN} GOARCH=${ARCH_ARM64} CGO_ENABLED=1 go build -o ../bin/${BINARY_NAME}-${DARWIN}-${ARCH_ARM64} main.go
+	cd src && GOOS=${DARWIN} GOARCH=${ARCH_ARM64}  go build -o ../bin/${BINARY_NAME}-${DARWIN}-${ARCH_ARM64} main.go
 
 
 build: clean compile-windows-amd64 compile-windows-arm64 compile-freebsd-amd64 compile-freebsd-arm64 compile-linux-amd64 compile-linux-arm64 compile-mac-intel compile-mac-apple-silicon
