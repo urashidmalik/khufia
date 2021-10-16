@@ -29,14 +29,11 @@ jobs:
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         WITH_V: true
-    - name: Checkout code again
-      uses: actions/checkout@v2
+        DEFAULT_BUMP: patch
+     - uses: ncipollo/release-action@v1
       with:
-        fetch-depth: '0'
-    - name: Release
-      uses: softprops/action-gh-release@v1
-      with:
-        files: |
-          bin/khufia-*
+        artifacts: "bin/khufia-*"
+        token: ${{ secrets.GITHUB_TOKEN }}
+          
 
       
