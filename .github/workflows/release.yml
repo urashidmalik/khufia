@@ -8,7 +8,7 @@ jobs:
   
   Release:
     runs-on: ubuntu-latest
-    needs: TestAndBuild
+    
     steps:
     - name: Install Go
       uses: actions/setup-go@v2
