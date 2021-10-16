@@ -1,5 +1,6 @@
-on: [push, pull_request]
-  tags:
+on: 
+  push:
+    tags:
       - "v*.*.*"
 name: khufia - CI
 jobs:
